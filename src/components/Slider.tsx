@@ -40,7 +40,7 @@ export const Slider = (selectProps: Props) => {
   const api = createMemo(() => slider.connect(state, send, normalizeProps))
   return (
     <div {...api().rootProps}>
-      <div class="text-s op-50 fb items-center">
+      <div class="op-50 fb items-center" style="font-size: 14px;">
         <span>温度值（较高的温度值回答更加随机和多样化，而较低的温度值回答更加确定和一致。）</span>
         <output {...api().outputProps}>{formatSliderValue(api().value)}</output>
       </div>
