@@ -67,8 +67,8 @@ export default (props: Props) => {
             />
           </div>
           <div class="w-full fi fb">
-            <button onClick={handleButtonClick} gen-slate-btn>
-              确定
+            <button onClick={handleButtonClick} gen-slate-btn class="gen-slate-btn w-22>
+            <span>确定</span>
             </button>
             <div class="w-full ml-2">
               <SettingsSlider
