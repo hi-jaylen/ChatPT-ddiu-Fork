@@ -258,8 +258,6 @@ export default () => {
           </button>
           <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-44">
             <span>清除对话</span>
-          <!--<button title="清除对话" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn">
-            <IconClear />-->
           </button>
         </div>
       </Show>
