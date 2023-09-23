@@ -73,7 +73,7 @@ export default (props: Props) => {
             <div class="w-full ml-2">
               <SettingsSlider
                 settings={{
-                  name: '温度值（较高的温度值会使生成的回答更加随机和多样化，而较低的温度值则会使回答更加确定和一致。）',
+                  name: 'Temperature',
                   type: 'slider',
                   min: 0,
                   max: 2,
