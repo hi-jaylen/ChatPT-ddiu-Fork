@@ -35,7 +35,7 @@ export default (props: Props) => {
               <Show when={props.canEdit()} fallback={<IconEnv />}>
                 <span onClick={() => props.setCurrentSystemRoleSettings('')} class="sys-edit-btn p-1 rd-50%" > <IconX /> </span>
               </Show>
-              <span>System Role ( Temp = {temperature()} ) : </span>
+              <span>AI角色信息 ( Temp = {temperature()} ) ： </span>
             </div>
             <div class="mt-1">
               {props.currentSystemRoleSettings()}
@@ -45,7 +45,7 @@ export default (props: Props) => {
         <Show when={!props.currentSystemRoleSettings() && props.canEdit()}>
           <span onClick={() => props.setSystemRoleEditing(!props.systemRoleEditing())} class="sys-edit-btn">
             <IconEnv />
-            <span>Add System Role</span>
+            <span>设定AI角色信息</span>
           </span>
         </Show>
       </Show>
@@ -53,13 +53,13 @@ export default (props: Props) => {
         <div>
           <div class="fi gap-1 op-50 dark:op-60">
             <IconEnv />
-            <span>System Role:</span>
+            <span>AI角色信息：</span>
           </div>
-          <p class="my-2 leading-normal text-sm op-50 dark:op-60">Gently instruct the assistant and set the behavior of the assistant.</p>
+          <p class="my-2 leading-normal text-sm op-50 dark:op-60">请输入你要为AI设定的角色信息，内容越详尽AI越能更好的扮演该角色。如不设定则为系统默认角色。</p>
           <div>
             <textarea
               ref={systemInputRef!}
-              placeholder="You are a helpful assistant, answer as concisely as possible...."
+              placeholder="你想让AI扮演什么角色呢？"
               autocomplete="off"
               autofocus
               rows="3"
@@ -68,12 +68,12 @@ export default (props: Props) => {
           </div>
           <div class="w-full fi fb">
             <button onClick={handleButtonClick} gen-slate-btn>
-              Set
+              确定
             </button>
             <div class="w-full ml-2">
               <SettingsSlider
                 settings={{
-                  name: 'Temperature',
+                  name: '温度值（较高的温度值会使生成的回答更加随机和多样化，而较低的温度值则会使回答更加确定和一致。）',
                   type: 'slider',
                   min: 0,
                   max: 2,
