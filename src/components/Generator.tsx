@@ -233,8 +233,8 @@ export default () => {
         when={!loading()}
         fallback={() => (
           <div class="gen-cb-wrapper">
-            <span>AI is thinking...</span>
-            <div class="gen-cb-stop" onClick={stopStreamFetch}>Stop</div>
+            <span>AI正在思考中...</span>
+            <div class="gen-cb-stop" onClick={stopStreamFetch}>停止回答</div>
           </div>
         )}
       >
@@ -243,7 +243,7 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder="与 ta 对话吧..."
             autocomplete="off"
             autofocus
             onInput={() => {
@@ -253,11 +253,13 @@ export default () => {
             rows="1"
             class="gen-textarea"
           />
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
-            Send
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-22">
+            <span>发送</span>
           </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
-            <IconClear />
+          <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-44">
+            <span>清除对话</span>
+          <!--<button title="清除对话" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn">
+            <IconClear />-->
           </button>
         </div>
       </Show>
@@ -268,6 +270,7 @@ export default () => {
           </button>
         </div>
       </div>
+      <span op-30 style="font-size: 14px;">[Shift] + [Enter] 换行</span>
     </div>
   )
 }
