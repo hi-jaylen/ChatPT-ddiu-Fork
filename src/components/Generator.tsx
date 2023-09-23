@@ -256,7 +256,7 @@ export default () => {
           <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-22">
             <span>发送</span>
           </button>
-          <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-44">
+          <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-35">
             <span>清除对话</span>
           </button>
         </div>
