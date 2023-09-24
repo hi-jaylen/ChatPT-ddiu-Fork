@@ -253,10 +253,10 @@ export default () => {
             rows="1"
             class="gen-textarea"
           />
-          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-22">
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-24">
             <span>发送</span>
           </button>
-          <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-22">
+          <button onClick={clear} disabled={systemRoleEditing()} gen-slate-btn class="gen-slate-btn w-24">
             <span>清除</span>
           </button>
         </div>
